@@ -117,6 +117,16 @@ Add in build.gradle
                 }
                 Loader.hidepDialog();
             }
+	     @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                //  Log.e("ErrorApicall", t.getMessage());
+                Loader.hidepDialog();
+                Toast.makeText(LoginActivity.this, "Oops! Server error, please try again.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
 
 
 # Request_loader class
