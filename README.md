@@ -6,13 +6,14 @@ dependencies {
 
 # Internet Access permission write in AndroidManifest
 
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+   {<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />}
   
 
 # Application Class
 
-public class Appdemo extends Application {
+public class Appdemo extends Application 
+{
     private static Appdemo apprkc;
     
     @Override
@@ -39,7 +40,8 @@ public class Appdemo extends Application {
 
 # Data Interface
 
-public interface DataAPI {
+public interface DataAPI 
+{
     @GET("login.php")
     Call<ResponseBody> loginget(@Query("email") String email,
                               @Query("password") String password);
@@ -55,7 +57,8 @@ public interface DataAPI {
 
 Request_loader Loader=new Request_loader(LoginActivity.this);
 
- private void login() {
+ private void login()
+ {
         Loader.showpDialog();
         DataAPI apiCall = AppCloudLaundry.getInstance().getAdapter();
         Call<ResponseBody> responseBodyCall;
@@ -97,7 +100,8 @@ Request_loader Loader=new Request_loader(LoginActivity.this);
 
 
 
-public class Request_loader {
+public class Request_loader 
+{
 	private Context context;
 	private Dialog please_wait_dialog;
 
