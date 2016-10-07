@@ -1,22 +1,21 @@
 # retrofit 
 Add in build.gradle
 
-dependencies {
+	dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     }
 
-# Internet Access permission write
-AndroidManifest
+# Internet Access permission write in AndroidManifest
 
-   uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"
+	uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"
    
-    uses-permission android:name="android.permission.INTERNET" 
+    	uses-permission android:name="android.permission.INTERNET" 
   
 
 # Application Class
-	application class
-public class Appdemo extends Application 
-{
+		
+	public class Appdemo extends Application 
+	{
     private static Appdemo apprkc;    
     @Override
     public void onCreate() {
@@ -38,13 +37,12 @@ public class Appdemo extends Application
         return dataAPI;
     }
 
-}
+	}
 
 # Data Interface
-	method
-
-public interface DataAPI 
-{
+	
+	public interface DataAPI 
+	{
     @GET("login.php")
     Call<ResponseBody> loginget(@Query("email") String email,
                               @Query("password") String password);
@@ -53,15 +51,14 @@ public interface DataAPI
     @POST("login1.php")
     Call<ResponseBody> loginpost(@Field("email") String email,
                                 @Field("password") String password);
-}
+	}
 
 
-# Activity
-	Lonin Activity
-Request_loader Loader=new Request_loader(LoginActivity.this);
+# Lonin Activity
+	Request_loader Loader=new Request_loader(LoginActivity.this);
 
- private void login()
- {
+ 	private void login()
+ 	{
         Loader.showpDialog();
         DataAPI apiCall = AppCloudLaundry.getInstance().getAdapter();
         Call<ResponseBody> responseBodyCall;
@@ -102,10 +99,9 @@ Request_loader Loader=new Request_loader(LoginActivity.this);
             }
 
 
-# Loader
-	Request_loader class
-public class Request_loader 
-{
+# Request_loader class
+	public class Request_loader 
+	{
 	private Context context;
 	private Dialog please_wait_dialog;
 
@@ -136,6 +132,6 @@ public class Request_loader
 	}
 	
 	 
-}
+	}
 
 
