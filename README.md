@@ -53,8 +53,28 @@ Add in build.gradle
                                 @Field("password") String password);
 	}
 
+# NetworkCheck
+	public class NetworkCheck {
 
-# Lonin Activity
+    public static boolean isInternetOn(Context context) {
+
+        // get Connectivity Manager object to check connection
+        ConnectivityManager connec =
+                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo networkInfo = connec.getActiveNetworkInfo();
+
+        if (networkInfo != null && networkInfo.isConnected() && networkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+            return true;
+        } else if (networkInfo != null && networkInfo.isConnected() && networkInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+            return true;
+        }
+        return false;
+    }
+
+	}
+
+# Json Request Get Or Post
 	Request_loader Loader=new Request_loader(LoginActivity.this);
 
  	private void login()
