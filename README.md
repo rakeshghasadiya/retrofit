@@ -1,10 +1,12 @@
-# retrofit Lobray Add in build.gradle
+# retrofit 
+Add in build.gradle
 
 dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     }
 
-# Internet Access permission write in AndroidManifest
+# Internet Access permission write
+AndroidManifest
 
    uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"
    
@@ -12,8 +14,7 @@ dependencies {
   
 
 # Application Class
-
-
+	application class
 public class Appdemo extends Application 
 {
     private static Appdemo apprkc;    
@@ -40,6 +41,7 @@ public class Appdemo extends Application
 }
 
 # Data Interface
+	method
 
 public interface DataAPI 
 {
@@ -54,8 +56,8 @@ public interface DataAPI
 }
 
 
-# Lonin Activity
-
+# Activity
+	Lonin Activity
 Request_loader Loader=new Request_loader(LoginActivity.this);
 
  private void login()
@@ -100,7 +102,8 @@ Request_loader Loader=new Request_loader(LoginActivity.this);
             }
 
 
-
+# Loader
+	Request_loader class
 public class Request_loader 
 {
 	private Context context;
