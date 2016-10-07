@@ -7,15 +7,16 @@ dependencies {
 # Internet Access permission write in AndroidManifest
 
    uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"
+   
     uses-permission android:name="android.permission.INTERNET" 
   
 
 # Application Class
 
+
 public class Appdemo extends Application 
 {
-    private static Appdemo apprkc;
-    
+    private static Appdemo apprkc;    
     @Override
     public void onCreate() {
         super.onCreate();
